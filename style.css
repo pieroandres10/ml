@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: #4285F4;
+}
+
+.main-container{
+	width: 410px;
+	height: 480px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	background: #fff;
+	padding: 30px;
+	box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+	border-radius: 2px;
+}
+
+.container{
+	width: 820px;
+	height: 100%;
+	position: absolute;
+	left:0;
+	z-index: -1;
+	display: flex;
+	flex-direction: row;
+	transition: all 0.5s ease;
+}
+.login-container,.signup-container{
+	width: 410px;
+	padding: 30px;
+	height: 100%;
+}
+
+#slide:checked ~ .container{
+	left: -410px;
+	position: absolute;
+}
+
+.container .text{
+	font-size: 35px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.container form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.container form .data{
+	height: 45px;
+	width: 100%;
+	margin: 20px 0;
+}
+
+form .data label{
+	font-size: 18px;
+}
+
+form .data input{
+	height: 100%;
+	width: 100%;
+	padding-left: 10px;
+	font-size: 17px;
+	border: 1px solid silver;
+	outline: none;
+	border-radius: 2px;
+}
+
+ .data input:focus{
+	border-color: #4285F4;
+	border-bottom-width: 2.5px;
+}
+
+form .forgot-pass{
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-self: start;
+}
+
+form .forgot-pass a{
+	color: #4285F4;
+	text-decoration: none;
+}
+
+form .forgot-pass a:hover{
+	text-decoration: underline;
+}
+
+form .btn-login{
+	margin: 52px 0 20px 0;
+	height: 45px;
+	width: 100%;
+}
+
+form .btn-signup{
+	margin: 20px 0;
+	height: 45px;
+	width: 100%;
+}
+
+form .btn-login button,form .btn-signup button{
+	height: 100%;
+	width: 100%;
+	background: #4285F4;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	border: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.btn-login button:hover,.btn-signup button:hover{
+	background: #fff;
+	border: 2px solid #4285F4;
+	color: #4285F4;
+}
+
+form .signup-link{
+	text-align: center;
+}
+
+form .signup-link a{
+	color: #4285F4;
+	text-decoration: none;
+}
+
+form .signup-link .slide{
+	cursor: pointer;
+}
+
+form .signup-link a:hover{
+	text-decoration: underline;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
